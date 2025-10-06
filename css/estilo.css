@@ -1,0 +1,230 @@
+:root {
+    --primary-color: #6a1b9a;
+    /* Um tom de violeta */
+    --secondary-color: #ab47bc;
+    /* Um violeta mais claro */
+    --dark-bg: #212529;
+    /* Cor do navbar e footer */
+    --light-bg: #f8f9fa;
+    --text-color: #343a40;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+    padding-top: 56px;
+    /* Altura do navbar fixo */
+}
+
+/* Navbar Customização */
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    /* Sugestão de fonte mais elegante */
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    /* Mais um toque de cor */
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.logo {
+    border-radius: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/RP-gemini.png') no-repeat center center/cover;
+    min-height: 80vh;
+    position: relative;
+    padding: 100px 0;
+    margin-top: -60px;
+    font-family: "Dancing Script", cursive;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-section .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Títulos das Seções */
+h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Sobre Nós Section */
+#sobre .img-fluid {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Serviços Section */
+#servicos .card {
+    border: none;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicos .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#servicos .card-body {
+    padding: 2.5rem 1.5rem;
+}
+
+#servicos .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+#servicos .text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Galeria Section */
+#galeria .carousel-item img {
+    height: 500px;
+    /* Altura fixa para as imagens do carrossel */
+    object-fit: cover;
+}
+
+/* Media Queries para Responsividade (Bootstrap já é responsivo, mas este é um exemplo de ajuste fino) */
+@media (max-width: 991.98px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    #galeria .carousel-item img {
+        height: 350px;
+    }
+
+    .navbar-collapse {
+        background-color: var(--dark-bg);
+        padding: 15px;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    #galeria .carousel-item img {
+        height: 250px;
+    }
+
+    body {
+        padding-top: 56px;
+        /* Ajusta se o navbar mudar de altura no mobile */
+    }
+}
+
+/* Estilos adicionais para melhorar a visualização dos cards no carrossel */
+.carousel-item {
+    padding-bottom: 120px;
+    /* Espaçamento vertical para os cards */
+    margin: auto;
+}
+
+.carousel-item .col {
+    display: flex;
+    /* Para que os cards tenham a mesma altura */
+    justify-content: center;
+    /* Centraliza os cards quando há menos de 3 */
+}
+
+.carousel-item .card {
+    min-height: 250px;
+    /* Altura mínima para os cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    /* Remove a borda padrão do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra suave */
+    transition: transform 0.3s ease;
+    /* Animação ao passar o mouse */
+}
+
+.carousel-item .card:hover {
+    transform: translateY(-5px);
+    /* Efeito de elevação ao passar o mouse */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    /* Ajusta a largura dos botões de navegação */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    /* Torna os ícones visíveis em qualquer fundo */
+}
+
+/* Footer */
+footer .social-links a {
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Animações (se quiser usar o Animate.css, adicione o link no HTML) */
+/* .animate__animated {
+    animation-duration: 1s;
+} */
