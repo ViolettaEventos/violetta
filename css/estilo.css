@@ -197,6 +197,6 @@ h2 {
 
 /* Garantir que a imagem do modal seja responsiva */
 #modalImage {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 }
