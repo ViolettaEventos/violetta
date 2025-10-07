@@ -170,61 +170,33 @@ h2 {
     }
 }
 
-/* Estilos adicionais para melhorar a visualização dos cards no carrossel */
-.carousel-item {
-    padding-bottom: 120px;
-    /* Espaçamento vertical para os cards */
-    margin: auto;
+.gallery-item {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    /* Espaçamento entre as linhas */
 }
 
-.carousel-item .col {
-    display: flex;
-    /* Para que os cards tenham a mesma altura */
-    justify-content: center;
-    /* Centraliza os cards quando há menos de 3 */
+.gallery-item:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
 }
 
-.carousel-item .card {
-    min-height: 250px;
-    /* Altura mínima para os cards */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.modal-content {
+    background-color: transparent;
     border: none;
-    /* Remove a borda padrão do card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Adiciona uma sombra suave */
-    transition: transform 0.3s ease;
-    /* Animação ao passar o mouse */
 }
 
-.carousel-item .card:hover {
-    transform: translateY(-5px);
-    /* Efeito de elevação ao passar o mouse */
+.modal-header {
+    border-bottom: none;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%;
-    /* Ajusta a largura dos botões de navegação */
+.modal-body {
+    text-align: center;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(1);
-    /* Torna os ícones visíveis em qualquer fundo */
+/* Garantir que a imagem do modal seja responsiva */
+#modalImage {
+    max-width: 100%;
+    height: auto;
 }
-
-/* Footer */
-footer .social-links a {
-    transition: color 0.3s ease;
-}
-
-footer .social-links a:hover {
-    color: var(--primary-color) !important;
-}
-
-/* Animações (se quiser usar o Animate.css, adicione o link no HTML) */
-/* .animate__animated {
-    animation-duration: 1s;
-} */

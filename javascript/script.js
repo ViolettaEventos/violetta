@@ -29,3 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/**
+       * Função chamada ao clicar em qualquer imagem da galeria.
+       * Ela pega o atributo 'src' da imagem clicada e define como 'src'
+       * da imagem dentro do modal.
+       * @param {HTMLImageElement} element - O elemento de imagem (<img>) que foi clicado.
+       */
+function showImage(element) {
+    // Pega o elemento <img> dentro do modal
+    const modalImage = document.getElementById('modalImage');
+
+    // Define o 'src' do modal com o 'src' da imagem clicada
+    modalImage.src = element.src;
+
+    // O Bootstrap se encarrega de exibir o modal usando os atributos data-bs-* no HTML.
+}
